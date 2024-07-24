@@ -6,6 +6,19 @@ labels: [
 ]
 body:
   - type: textarea
+    id: Epic Definition
+    attributes:
+      label: "Epic Definition"
+      value: |
+        1. Go to '...'
+        2. Click on '....'
+        3. Scroll down to '....'
+        4. See error
+      description: Please enter an explicit description of your issue
+      placeholder: Short and explicit description of your incident...
+    validations:
+      required: true
+  - type: textarea
     id: description
     attributes:
       label: "Description"
