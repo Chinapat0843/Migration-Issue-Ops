@@ -31,5 +31,12 @@ body:
     validations:
       required: true
 
+  - type: input
+    id: picture
+    attributes:
+      label: Attach a Picture (optional)
+      description: If a picture helps illustrate the issue, please upload one here.
+      type: image  # This specifies the input type as image
+
 
   
