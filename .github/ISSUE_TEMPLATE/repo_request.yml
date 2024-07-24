@@ -18,12 +18,11 @@ body:
     validations:
       required: true
 
-  - type: input
+  - type: file
     id: picture
     attributes:
-      label: Attach a Picture (optional)
-      description: If a picture helps illustrate the issue, please upload one here.
-      type: image 
+      label: Attach a Picture (Optional)
+      description: If a picture helps illustrate the issue, feel free to upload one here.
   
   - type: dropdown
     id: department
