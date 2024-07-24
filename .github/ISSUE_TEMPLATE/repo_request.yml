@@ -1,6 +1,6 @@
-name: '🗒️ Migration repo'
+name: '️ Migration repo'
 description: 'Request a new repository.'
-title: '🗒️ Repository Request: '
+title: '️ Repository Request: '
 labels:
   - 'repo-request'
   - 'issue-ops'
@@ -30,7 +30,10 @@ body:
       default: 0
     validations:
       required: true
- # This specifies the input type as image
-
-
   
+  - type: input  # This line defines the new text box
+    id: additional_info  # Unique identifier for the text box
+    attributes:
+      label: 'Additional Information (Optional)'  # Label displayed to user
+      description: 'Provide any additional details relevant to your request.'  # Explanation for the text box
+      placeholder: 'e.g., Specific functionalities, references'  # Placeholder text to guide users
