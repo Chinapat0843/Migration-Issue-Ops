@@ -9,6 +9,35 @@ assignees:
   - wulfland
 
 body:
+  expected-behavior: |  # Multi-line description for clarity
+    Describe the behavior that you anticipate to see under normal conditions.
+    Explain what the system or feature should do in this scenario.
+
+  current-behavior: |  # Multi-line description for accurate reporting
+    Detail the actual behavior you're encountering.
+    Be specific about the deviations from the expected behavior.
+
+  possible-solution: |  # Optional section for suggestions
+    If you have any ideas for how to resolve the issue, feel free to share them here.
+    This could include specific code snippets, workarounds, or references.
+
+  steps-to- reproduce: |  # Multi-line description for easy troubleshooting
+    Provide clear, concise steps that reliably recreate the issue.
+    Include code examples or links to demonstrations if applicable.
+    The goal is to make it easy for developers to understand and replicate the problem.
+
+  context: |  # Multi-line description for impact assessment
+    Explain how this issue is impacting your workflow or functionality.
+    Describe what you're trying to achieve and how the problem hinders progress.
+
+  environment: |  # Multi-line description for replication
+    List relevant details about the environment where you encountered the issue.
+    This may include:
+      * Version of the software or framework you're using
+      * Browser name and version (if applicable)
+      * Operating system (desktop or mobile) and version
+      * Link to your project (if applicable)
+      
   - type: input
     id: name
     attributes:
