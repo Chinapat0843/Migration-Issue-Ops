@@ -1,68 +1,80 @@
-name: '️ Migration repo'
-description: 'Request a new repository.'
-title: '️ Repository Request: '
-labels:
-  - 'repo-request'
-  - 'issue-ops'
-projects: 'wulfland/19'
-assignees:
-  - wulfland
-
+name: "🐛 Bug Report"
+description: Create a new ticket for a bug.
+title: "🐛 [BUG] - <title>"
+labels: [
+  "bug"
+]
 body:
-  expected-behavior: |  # Multi-line description for clarity
-    Describe the behavior that you anticipate to see under normal conditions.
-    Explain what the system or feature should do in this scenario.
-
-  current-behavior: |  # Multi-line description for accurate reporting
-    Detail the actual behavior you're encountering.
-    Be specific about the deviations from the expected behavior.
-
-  possible-solution: |  # Optional section for suggestions
-    If you have any ideas for how to resolve the issue, feel free to share them here.
-    This could include specific code snippets, workarounds, or references.
-
-  steps-to- reproduce: |  # Multi-line description for easy troubleshooting
-    Provide clear, concise steps that reliably recreate the issue.
-    Include code examples or links to demonstrations if applicable.
-    The goal is to make it easy for developers to understand and replicate the problem.
-
-  context: |  # Multi-line description for impact assessment
-    Explain how this issue is impacting your workflow or functionality.
-    Describe what you're trying to achieve and how the problem hinders progress.
-
-  environment: |  # Multi-line description for replication
-    List relevant details about the environment where you encountered the issue.
-    This may include:
-      * Version of the software or framework you're using
-      * Browser name and version (if applicable)
-      * Operating system (desktop or mobile) and version
-      * Link to your project (if applicable)
-      
+  - type: textarea
+    id: description
+    attributes:
+      label: "Description"
+      description: Please enter an explicit description of your issue
+      placeholder: Short and explicit description of your incident...
+    validations:
+      required: true
   - type: input
-    id: name
+    id: reprod-url
     attributes:
-      label: 'Name'
-      description: 'Name of the repository in lower-case and kebab casing.'
-      placeholder: 'your-name-kebab'
+      label: "Reproduction URL"
+      description: Please enter your GitHub URL to provide a reproduction of the issue
+      placeholder: ex. https://github.com/USERNAME/REPO-NAME
     validations:
       required: true
-  
+  - type: textarea
+    id: reprod
+    attributes:
+      label: "Reproduction steps"
+      description: Please enter an explicit description of your issue
+      value: |
+        1. Go to '...'
+        2. Click on '....'
+        3. Scroll down to '....'
+        4. See error
+      render: bash
+    validations:
+      required: true
+  - type: textarea
+    id: screenshot
+    attributes:
+      label: "Screenshots"
+      description: If applicable, add screenshots to help explain your problem.
+      value: |
+        ![DESCRIPTION](LINK.png)
+      render: bash
+    validations:
+      required: false
+  - type: textarea
+    id: logs
+    attributes:
+      label: "Logs"
+      description: Please copy and paste any relevant log output. This will be automatically formatted into code, so no need for backticks.
+      render: bash
+    validations:
+      required: false
   - type: dropdown
-    id: department
+    id: browsers
     attributes:
-      label: 'Department'
-      description: 'Pick your department. It will be used as a prefix for the repository name.'
-      multiple: false
+      label: "Browsers"
+      description: What browsers are you seeing the problem on ?
+      multiple: true
       options:
-        - dep1
-        - dep2
-      default: 0
+        - Firefox
+        - Chrome
+        - Safari
+        - Microsoft Edge
+        - Opera
     validations:
-      required: true
-  
-  - type: input  # This line defines the new text box
-    id: additional_info  # Unique identifier for the text box
+      required: false
+  - type: dropdown
+    id: os
     attributes:
-      label: 'Additional Information (Optional)'  # Label displayed to user
-      description: 'Provide any additional details relevant to your request.'  # Explanation for the text box
-      placeholder: 'e.g., Specific functionalities, references'  # Placeholder text to guide users
+      label: "OS"
+      description: What is the impacted environment ?
+      multiple: true
+      options:
+        - Windows
+        - Linux
+        - Mac
+    validations:
+      required: false
