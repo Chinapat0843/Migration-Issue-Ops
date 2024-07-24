@@ -17,12 +17,6 @@ body:
       placeholder: 'your-name-kebab'
     validations:
       required: true
-
-  - type: file
-    id: picture
-    attributes:
-      label: Attach a Picture (Optional)
-      description: If a picture helps illustrate the issue, feel free to upload one here.
   
   - type: dropdown
     id: department
