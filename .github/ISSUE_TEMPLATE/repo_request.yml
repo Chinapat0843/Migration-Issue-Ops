@@ -17,6 +17,13 @@ body:
       placeholder: 'your-name-kebab'
     validations:
       required: true
+
+  - type: input
+    id: picture
+    attributes:
+      label: Attach a Picture (optional)
+      description: If a picture helps illustrate the issue, please upload one here.
+      type: image 
   
   - type: dropdown
     id: department
@@ -30,13 +37,7 @@ body:
       default: 0
     validations:
       required: true
-
-  - type: input
-    id: picture
-    attributes:
-      label: Attach a Picture (optional)
-      description: If a picture helps illustrate the issue, please upload one here.
-      type: image  # This specifies the input type as image
+ # This specifies the input type as image
 
 
   
